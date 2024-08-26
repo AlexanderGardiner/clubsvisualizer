@@ -13,8 +13,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        dphsDarkBlue: "#022241",
+        dphsGold: "#eec814",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
