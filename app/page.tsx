@@ -38,7 +38,7 @@ const fetchData = async (): Promise<StructuredData[]> => {
       let date = new Date();
       let day = date.getDay();
       if (
-        rows[i][1].toLowerCase().includes(days[day + 2]) &&
+        rows[i][1].toLowerCase().includes(days[day]) &&
         rows[i][rows[i].length - 1] == "Valid"
       ) {
         updatedData.push([rows[i][0], rows[i][2], rows[i][3]]);
@@ -78,7 +78,7 @@ const HomePage: React.FC = () => {
     <div className="bg-dphsDarkBlue mt-0 py-10 w-[1920px] h-[1080px]">
       <div className="bg-dphsGold w-min p-4 ml-10 mb-10">
         <h1 className="font-montserrat text-8xl font-bold text-dphsDarkBlue whitespace-nowrap">
-          {toUpperCamelCase(days[new Date().getDay() + 4]) + "'s Clubs"}
+          {toUpperCamelCase(days[new Date().getDay()]) + "'s Clubs"}
         </h1>
       </div>
       <OverflowTable items={data} />
